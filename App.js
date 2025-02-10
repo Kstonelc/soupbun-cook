@@ -1,20 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect } from "react";
+import { GluestackUIProvider } from "@gluestack-ui/themed";
+import { config } from "@gluestack-ui/config";
+import { RootNavigation } from "./src/screens/RootNavigation";
+import "./global.css";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+const App = () => {
+  //region 初始化
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  useEffect(() => {
+    initialize();
+    return () => {
+      destroy();
+    };
+  }, []);
+
+  const initialize = async () => {};
+
+  const destroy = async () => {};
+
+  //endregion
+
+  return <AppWrapper />;
+};
+
+const AppWrapper = () => {
+  return <RootNavigation />;
+};
+
+export default App;
