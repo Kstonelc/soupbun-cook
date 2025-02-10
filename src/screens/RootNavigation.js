@@ -19,6 +19,7 @@ const RootNavigation = ({ route }) => {
 
 const Stack = createNativeStackNavigator();
 const NavigationWrapper = ({ route }) => {
+  appHelper.useInsets();
   appHelper.useNavigation();
 
   return (

@@ -8,7 +8,7 @@ const Text = ({
   children,
   ...props
 }) => {
-  return <TextGS>{children}</TextGS>;
+  return <TextGS className={className}>{children}</TextGS>;
 };
 
 export { Text };
