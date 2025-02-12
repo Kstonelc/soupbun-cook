@@ -5,6 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import _example from "../_example";
+import { UserSetting } from "./User";
 
 import { UserNavigation } from "./User";
 const RootNavigation = ({ route }) => {
@@ -36,6 +37,7 @@ const NavigationWrapper = ({ route }) => {
       </Stack.Group>
       <Stack.Group key={"用户功能"}>
         <Stack.Screen name={"UserNavigation"} component={UserNavigation} />
+        <Stack.Screen name={"UserSetting"} component={UserSetting} />
       </Stack.Group>
     </Stack.Navigator>
   );

@@ -1,18 +1,9 @@
 import React from "react";
 import { View } from "./View";
 
-const Screen = ({ style, children, ...props }) => {
+const Screen = ({ className, children, ...props }) => {
   return (
-    <View
-      {...props}
-      style={[
-        {
-          flex: 1,
-          backgroundColor: "#F2F5F9",
-        },
-        style,
-      ]}
-    >
+    <View {...props} className={`flex flex-1 bg-background-50 ${className}`}>
       {children}
     </View>
   );

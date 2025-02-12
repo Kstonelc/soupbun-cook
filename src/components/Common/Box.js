@@ -1,9 +1,11 @@
-import { Box as BoxGS } from "@/components/ui/box";
+import React from "react";
 import appHelper from "../../AppHelper";
+import { View } from "./View";
 
 const Box = ({
   safeArea = [true, true, true, true], // [top, right, bottom, left]
   floating = false,
+  scroll = null, // vertical, horizontal
   flex = true,
   className,
   style,
@@ -31,10 +33,18 @@ const Box = ({
       boxStyle.flex = 1;
     }
   }
+
+  console.log(boxStyle);
+
   return (
-    <BoxGS {...props} className={className} style={[boxStyle, style]}>
+    <View
+      {...props}
+      scroll={scroll}
+      style={[boxStyle, style]}
+      className={className}
+    >
       {children}
-    </BoxGS>
+    </View>
   );
 };
 
