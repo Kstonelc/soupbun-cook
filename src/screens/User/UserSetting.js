@@ -1,11 +1,11 @@
 import { Screen, Text, Box, Avatar, View, Badge } from "@/src/components";
 import { Icon } from "@/components/ui/icon";
-import { Mars } from "lucide-react-native";
+import { Mars, Heart, ChevronRight } from "lucide-react-native";
 
 const UserSetting = () => {
   return (
     <Screen>
-      <Box className={"p-5"}>
+      <Box scroll={true}>
         <View className={"mb-4 bg-white rounded-xl p-6"}>
           <View>
             <View className={"flex flex-row justify-start mb-3"}>
@@ -32,6 +32,24 @@ const UserSetting = () => {
               <Text>粉丝</Text>
             </View>
           </View>
+        </View>
+        <View
+          className={
+            "flex flex-row justify-between items-center bg-typography-0 p-4 rounded-xl"
+          }
+        >
+          <View className={"flex flex-row items-center rounded-xl"}>
+            <Icon
+              as={Heart}
+              color={"red"}
+              className={"mr-4"}
+              size={"xl"}
+            ></Icon>
+            <Text bold={true} size={"lg"}>
+              家庭
+            </Text>
+          </View>
+          <Icon as={ChevronRight}></Icon>
         </View>
       </Box>
     </Screen>

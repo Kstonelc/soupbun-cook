@@ -34,8 +34,6 @@ const Box = ({
     }
   }
 
-  console.log(boxStyle);
-
   return (
     <View
       {...props}

@@ -8,7 +8,7 @@ import { Box, View, Text } from "@/src/components";
 
 import { UserSetting } from "../User/UserSetting";
 import Publish from "../Publish";
-import { User, House } from "lucide-react-native";
+import { User, House, Plus } from "lucide-react-native";
 
 const Tab = createBottomTabNavigator();
 
@@ -92,11 +92,13 @@ const UserNavigation = ({ route }) => {
         options={{
           tabBarIcon: ({ focused, color, size }) => {
             return (
-              <Icon
-                as={PublishIcon}
-                size={"60px"}
-                className="text-typography-black mt-5"
-              />
+              <View
+                className={
+                  "bg-amber-600 h-[40px] w-[40px] flex justify-center items-center mt-6 rounded-xl"
+                }
+              >
+                <Icon as={Plus} color={"white"} size={"xl2"}></Icon>
+              </View>
             );
           },
         }}
