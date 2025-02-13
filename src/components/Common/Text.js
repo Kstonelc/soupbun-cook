@@ -4,11 +4,12 @@ const Text = ({
   ellipsize = false,
   bold = false,
   className,
+  style,
   children,
   ...props
 }) => {
   return (
-    <TextGS className={className} size={size} bold={bold}>
+    <TextGS className={className} size={size} bold={bold} style={style}>
       {children}
     </TextGS>
   );

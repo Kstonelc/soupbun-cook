@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import _example from "../_example";
 import { UserSetting } from "./User";
+import { IngredientsHome } from "./Ingredients";
 
 import { UserNavigation } from "./User";
 const RootNavigation = ({ route }) => {
@@ -38,6 +39,9 @@ const NavigationWrapper = ({ route }) => {
       <Stack.Group key={"用户功能"}>
         <Stack.Screen name={"UserNavigation"} component={UserNavigation} />
         <Stack.Screen name={"UserSetting"} component={UserSetting} />
+      </Stack.Group>
+      <Stack.Group key={"库存"}>
+        <Stack.Screen name={"IngredientsHome"} component={IngredientsHome} />
       </Stack.Group>
     </Stack.Navigator>
   );

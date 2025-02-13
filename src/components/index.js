@@ -4,3 +4,4 @@ export * from "./Common/View";
 export * from "./Common/Screen";
 export * from "./Common/Avatar";
 export * from "./Common/Badge";
+export * from "./Common/Pressable";
