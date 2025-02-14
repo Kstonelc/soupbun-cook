@@ -5,7 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import _example from "../_example";
-import { UserSetting } from "./User";
+import { UserSetting, UserLogin } from "./User";
 import { IngredientsHome } from "./Ingredients";
 
 import { UserNavigation } from "./User";
@@ -31,7 +31,7 @@ const NavigationWrapper = ({ route }) => {
         detachPreviousScreen: false,
         gestureEnabled: false,
       }}
-      initialRouteName={"UserNavigation"}
+      initialRouteName={"UserLogin"}
     >
       <Stack.Group key={"公共模块"}>
         <Stack.Screen name={"_example"} component={_example} />
@@ -39,6 +39,7 @@ const NavigationWrapper = ({ route }) => {
       <Stack.Group key={"用户功能"}>
         <Stack.Screen name={"UserNavigation"} component={UserNavigation} />
         <Stack.Screen name={"UserSetting"} component={UserSetting} />
+        <Stack.Screen name={"UserLogin"} component={UserLogin} />
       </Stack.Group>
       <Stack.Group key={"库存"}>
         <Stack.Screen name={"IngredientsHome"} component={IngredientsHome} />

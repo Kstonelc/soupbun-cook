@@ -9,7 +9,7 @@ import { Box, View, Text } from "@/src/components";
 import { UserSetting } from "../User/UserSetting";
 import { IngredientsHome } from "../Ingredients";
 import Publish from "../Publish";
-import { User, Plus, ShoppingBag } from "lucide-react-native";
+import { User, Plus, Refrigerator } from "lucide-react-native";
 
 const Tab = createBottomTabNavigator();
 
@@ -59,7 +59,7 @@ const UserNavigation = ({ route }) => {
             return (
               <View className={"items-center mt-5"}>
                 <Icon
-                  as={ShoppingBag}
+                  as={Refrigerator}
                   className={`${focused ? "text-primary-500" : "text-secondary-800"}`}
                 ></Icon>
                 <Text
